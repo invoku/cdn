@@ -583,14 +583,14 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 .fixed-nav #child-nav {
     top: 45px;
 }
-.sidebar ul.subnav {
+.sidebar ul {
     padding: 15px;
 }
-.sidebar ul.subnav li {
+.sidebar ul li {
     display: inline-block;
     padding: 0 10px;
 }
-.sidebar ul.subnav li a {
+.sidebar ul li a {
     font-weight: 700;
     color: #fff;
     font-size: 1.2em;
