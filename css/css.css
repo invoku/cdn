@@ -583,17 +583,17 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
 .fixed-nav #child-nav {
     top: 45px;
 }
-.sidebar widget-content {
+.sidebar .widget-content {
     padding: 15px;
 }
-.sidebar widget-content ul{
+.sidebar .widget-content ul{
     padding: 0;
 }
-.sidebar widget-content li {
+.sidebar .widget-content li {
     display: inline-block;
     padding: 0 10px;
 }
-.sidebar widget-content li a {
+.sidebar .widget-content li a {
     font-weight: 700;
     color: #fff;
     font-size: 1.2em;
