@@ -23,7 +23,7 @@ function FeaturedPostSide(a) {
         var d = h.MaxPost * 200;
         g.html('<div class="sliderx"><ul class="rcentside"></ul></div><div class="tombol"><a href="#" class="sebelum">sebelumnya</a><a href="#" class="sesudah">sesudah</a></div>');
         var f = function(w) {
-            var q, k, m, u, x, p, t, v, r, l = "",
+            var q, k, u, x, p, t, v, r, l = "",
                 s = w.feed.entry;
             for (var o = 0; o < s.length; o++) {
                 for (var n = 0; n < s[o].link.length; n++) {
@@ -39,7 +39,6 @@ function FeaturedPostSide(a) {
                 }
                 k = s[o].title.$t;
                 r = s[o].published.$t.substring(0, 10);
-                m = s[o].author[0].name.$t;
                 x = r.substring(0, 4);
                 p = r.substring(5, 7);
                 t = r.substring(8, 10);
