@@ -4,5 +4,77 @@
 window.recentposts=(function(){var a=function(p){var d=p||{},i=d.url_blog||"",n=d.numberofposts||5,h=d.id_contain||"#rcposts",e=d.imagesize||40,b=d.snippetsize||100,c=d.loadingClass||"rcloading",m=d.commentstext||"Comments",l=d.firstcmtext||"Comment",f=d.NoCmtext||"No Comments",g=d.MonthNames||["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],k=d.pBlank||"http://2.bp.blogspot.com/-MZ2UNvioO2A/Up-XDjMGhWI/AAAAAAAABuo/7btg1OAL3FQ/s1600/no.png";$(h).addClass(c);var j=i;if(i===""){j=window.location.protocol+"//"+window.location.host}$.ajax({url:j+"/feeds/posts/default?alt=json-in-script&orderby=published&max-results="+n+"",type:"get",dataType:"jsonp",success:function(v){var y,o,w,q,A,D,z,F,x,C,E,s="",B=v.feed.entry;if(B!==undefined){s="<ul class='rcpost'>";for(var u=0;u<B.length;u++){for(var t=0;t<B[u].link.length;t++){if(B[u].link[t].rel=="alternate"){y=B[u].link[t].href;break}}for(var r=0;r<B[u].link.length;r++){if(B[u].link[r].rel=="replies"&&B[u].link[r].type=="text/html"){w=B[u].link[r].title.split(" ")[0];break}}if("content" in B[u]){A=B[u].content.$t}else{if("summary" in B[u]){A=B[u].summary.$t}else{A=""}}if("media$thumbnail" in B[u]){D=B[u].media$thumbnail.url.replace(/\/s[0-9]+\-c/g,"/s"+e+"-c")}else{D=k}if(w===0){q=' <span class="rccomments">'+f+"</span>"}else{if(w===1){q=' <span class="rccomments">'+w+" "+l+"</span>"}else{q=' <span class="rccomments">'+w+" "+m+"</span>"}}A=A.replace(/<\S[^>]*>/g,"");if(A.length>b){A=A.substring(0,b)+"..."}o=B[u].title.$t;z=B[u].published.$t.substring(0,10),F=z.substring(0,4),x=z.substring(5,7),C=z.substring(8,10),E=g[parseInt(x,10)-1],s+='<li><a class="rcthumbs" href="'+y+'" target="_blank"><img style="width:'+e+"px;height:"+e+'px;display:block" alt="'+o+'"src="'+D+'"/></a><strong><a href="'+y+'" target="_blank">'+o+'</a></strong><span class="date"><span class="dd">'+C+'</span> <span class="dm">'+E+'</span> <span class="dy">'+F+"</span></span>"+q+"<p>"+A+"</p></li>"}s+="</ul>";$(h).html(s).removeClass(c)}else{$(h).html("<span>No result!</span>").removeClass(c)}},error:function(){$(h).html("<strong>Error Loading Feed!</strong>").removeClass(c)}})};return function(b){a(b)}})();
 //text-zoom
 var min=10; var max=20; function increaseFontSize() {   var p = document.getElementsByClassName('post'); for(i=0;i<p.length;i++) {   if(p[i].style.fontSize) { var s = parseInt(p[i].style.fontSize.replace("px","")); } else {   var s = 17; } if(s!=max) {   s += 1; } p[i].style.fontSize = s+"px"   } } function decreaseFontSize() { var p = document.getElementsByClassName('post'); for(i=0;i<p.length;i++) {   if(p[i].style.fontSize) { var s = parseInt(p[i].style.fontSize.replace("px","")); } else {   var s = 17; } if(s!=min) {   s -= 1; } p[i].style.fontSize = s+"px"   } }
-//slider halaman awal
-function FeaturedPostSide(a){(function(e){var h={blogURL:"",MaxPost:4,idcontaint:"",ImageSize:100,interval:5000,autoplay:false,loadingClass:"loadingxx",pBlank:"http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s1600/grey.gif",MonthNames:["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agt","Sep","Okt","Nov","Des"],tagName:false};h=e.extend({},h,a);var g=e(h.idcontaint);var d=h.MaxPost*200;g.html('<div class="sliderx"><ul class="rcentside"></ul></div><div class="tombol"><a href="#" class="sebelum">sebelumnya</a><a href="#" class="sesudah">sesudah</a></div>');var f=function(w){var q,k,m,u,x,p,t,v,r,l="",s=w.feed.entry;for(var o=0;o<s.length;o++){for(var n=0;n<s[o].link.length;n++){if(s[o].link[n].rel=="alternate"){q=s[o].link[n].href;break}}if("media$thumbnail" in s[o]){u=s[o].media$thumbnail.url.replace(/\/s[0-9]+\-c/g,"/s"+h.ImageSize+"-c")}else{u=h.pBlank.replace(/\/s[0-9]+(\-c|\/)/,"/s"+h.ImageSize+"$1")}k=s[o].title.$t;r=s[o].published.$t.substring(0,10);m=s[o].author[0].name.$t;x=r.substring(0,4);p=r.substring(5,7);t=r.substring(8,10);v=h.MonthNames[parseInt(p,10)-1];l+='<li><a target="_blank" href="'+q+'"><div class="overlayx"></div><img class="random" src="'+u+'"/><h4>'+k+'</h4></a><div class="label_text"><span class="date"><span class="dd">'+t+'</span> <span class="dm">'+v+'</span> <span class="dy">'+x+'</span></span>' "</div></li>"}e("ul",g).append(l).addClass(h.loadingClass)};var c=function(){e(h.idcontaint+" .sesudah").click()};var b=function(){e.get((h.blogURL===""?window.location.protocol+"//"+window.location.host:h.blogURL)+"/feeds/posts/summary"+(h.tagName===false?"":"/-/"+h.tagName)+"?max-results="+h.MaxPost+"&orderby=published&alt=json-in-script",f,"jsonp");setTimeout(function(){e(h.idcontaint+" .sebelum").click(function(){e(h.idcontaint+" .sliderx li:first").before(e(h.idcontaint+" .sliderx li:last"));return false});e(h.idcontaint+" .sesudah").click(function(){e(h.idcontaint+" .sliderx li:last").after(e(h.idcontaint+" .sliderx li:first"));return false});if(h.autoplay){var i=h.interval;var j=setInterval(c,i);e(h.idcontaint+" .sliderx li:first").before(e(h.idcontaint+" .sliderx li:last"));e(h.idcontaint+" .sliderx").hover(function(){clearInterval(j)},function(){j=setInterval(c,i)})}e("ul",g).removeClass(h.loadingClass)},d)};e(document).ready(b)})(jQuery)};
+function FeaturedPostSide(a) {
+    (function(e) {
+        var h = {
+            blogURL: "",
+            MaxPost: 4,
+            idcontaint: "",
+            ImageSize: 100,
+            interval: 5000,
+            autoplay: false,
+            loadingClass: "loadingxx",
+            pBlank: "http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s1600/grey.gif",
+            MonthNames: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"],
+            tagName: false
+        };
+        h = e.extend({}, h, a);
+        var g = e(h.idcontaint);
+        var d = h.MaxPost * 200;
+        g.html('<div class="sliderx"><ul class="rcentside"></ul></div><div class="tombol"><a href="#" class="sebelum">sebelumnya</a><a href="#" class="sesudah">sesudah</a></div>');
+        var f = function(w) {
+            var q, k, m, u, x, p, t, v, r, l = "",
+                s = w.feed.entry;
+            for (var o = 0; o < s.length; o++) {
+                for (var n = 0; n < s[o].link.length; n++) {
+                    if (s[o].link[n].rel == "alternate") {
+                        q = s[o].link[n].href;
+                        break
+                    }
+                }
+                if ("media$thumbnail" in s[o]) {
+                    u = s[o].media$thumbnail.url.replace(/\/s[0-9]+\-c/g, "/s" + h.ImageSize + "-c")
+                } else {
+                    u = h.pBlank.replace(/\/s[0-9]+(\-c|\/)/, "/s" + h.ImageSize + "$1")
+                }
+                k = s[o].title.$t;
+                r = s[o].published.$t.substring(0, 10);
+                m = s[o].author[0].name.$t;
+                x = r.substring(0, 4);
+                p = r.substring(5, 7);
+                t = r.substring(8, 10);
+                v = h.MonthNames[parseInt(p, 10) - 1];
+                l += '<li><a target="_blank" href="' + q + '"><div class="overlayx"></div><img class="random" src="' + u + '"/><h4>' + k + '</h4></a><div class="label_text"><span class="date"><span class="dd">' + t + '</span> <span class="dm">' + v + '</span> <span class="dy">' + x + '"</span></span></div></li>"
+            }
+            e("ul", g).append(l).addClass(h.loadingClass)
+        };
+        var c = function() {
+            e(h.idcontaint + " .sesudah").click()
+        };
+        var b = function() {
+            e.get((h.blogURL === "" ? window.location.protocol + "//" + window.location.host : h.blogURL) + "/feeds/posts/summary" + (h.tagName === false ? "" : "/-/" + h.tagName) + "?max-results=" + h.MaxPost + "&orderby=published&alt=json-in-script", f, "jsonp");
+            setTimeout(function() {
+                e(h.idcontaint + " .sebelum").click(function() {
+                    e(h.idcontaint + " .sliderx li:first").before(e(h.idcontaint + " .sliderx li:last"));
+                    return false
+                });
+                e(h.idcontaint + " .nextx").click(function() {
+                    e(h.idcontaint + " .sliderx li:last").after(e(h.idcontaint + " .sliderx li:first"));
+                    return false
+                });
+                if (h.autoplay) {
+                    var i = h.interval;
+                    var j = setInterval(c, i);
+                    e(h.idcontaint + " .sliderx li:first").before(e(h.idcontaint + " .sliderx li:last"));
+                    e(h.idcontaint + " .sliderx").hover(function() {
+                        clearInterval(j)
+                    }, function() {
+                        j = setInterval(c, i)
+                    })
+                }
+                e("ul", g).removeClass(h.loadingClass)
+            }, d)
+        };
+        e(document).ready(b)
+    })(jQuery)
+};
