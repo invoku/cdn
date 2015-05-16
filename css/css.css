@@ -1,3 +1,20 @@
+body
+{
+	color:#333;
+	background-color:#f0f0f0;
+	font:14px/1.428571429 Roboto,sans-serif
+}
+a:focus,a:hover
+{
+	color:#2a6496;
+	text-decoration:underline
+}
+	a:focus
+{
+	outline:thin dotted;
+	outline:5px auto -webkit-focus-ring-color;
+	outline-offset:-2px
+}
 *,:after,:before		
 {		
 	-webkit-box-sizing:border-box;		
