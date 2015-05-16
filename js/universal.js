@@ -52,7 +52,7 @@ function labelthumbs(json) {
         var towrite = "";
         var flag = 0;
         if (showpostdate == true) {
-            towrite = towrite + monthnames[parseInt(cdmonth, 10)] + "-" + cdday + " - " + cdyear;
+            towrite = towrite + monthnames[parseInt(cdmonth, 10)] + " " + cdday + " " + cdyear;
             flag = 1
         }
         document.write('<div class="recent-title">');
