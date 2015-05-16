@@ -647,15 +647,19 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
     margin-left: 60px;
 }
 .sidebar h2 {
-position: absolute;
-color: white;  
-font-weight: 900;
--webkit-transform: rotate(-90deg);
--moz-transform: rotate(-90deg);
--ms-transform: rotate(-90deg);
--o-transform: rotate(-90deg);
-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-bottom: 0;
+	position:absolute;
+	color:#fff;
+	font-weight:100;
+	width:42px;
+	left:10px;
+	font-size:3em;
+	text-transform:uppercase;
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	bottom:10px
 }
 .sidebar .widget-content ul{
     padding: 0;
