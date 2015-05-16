@@ -445,48 +445,7 @@
 }
 
 }
-	*,:after,:before
-{
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box
-}
-	html
-{
-	font-size:62.5%;
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-	overflow-x:hidden
-}
-	body
-{
-	color:#333;
-	background-color:#f0f0f0;
-	font:14px/1.428571429 Roboto,sans-serif
-}
-	button,input,select,textarea
-{
-	font:inherit/inherit inherit
-}
-	a
-{
-	color:#428bca;
-	text-decoration:none
-}
-	a:focus,a:hover
-{
-	color:#2a6496;
-	text-decoration:underline
-}
-	a:focus
-{
-	outline:thin dotted;
-	outline:5px auto -webkit-focus-ring-color;
-	outline-offset:-2px
-}
-	img
-{
-	vertical-align:middle
-}
+
 .img-responsive
 {
 	display:block;
