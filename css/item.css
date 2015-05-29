@@ -38,3 +38,30 @@ width: 653px;
 width: 900px;
 }
 }
+
+/* ============ PAGER ===============*/
+.mbt-pager { border-top: 2px dashed #ddd; border-bottom: 2px dashed #ddd;  margin-bottom: 10px;   overflow:hidden; padding:0px;} 
+.mbt-pager li.next { float: right; padding:0px; background:none; margin:0px;} 
+.mbt-pager li.next a { padding-left: 24px; }
+.mbt-pager li.previous { margin:0px -2px 0px 0px; float: left;  border-right:1px solid #ddd; padding:0px; background:none; 
+} 
+.mbt-pager li.previous a { padding-right: 24px;  }
+.mbt-pager li.next:hover, .mbt-pager li.previous:hover  {background:#333333; }
+.mbt-pager li { width: 50%; display: inline; float: left; text-align: center; } 
+.mbt-pager li a { position: relative; min-height: 77px; display: block; padding: 15px 46px 15px; outline:none; text-decoration:none;}
+.mbt-pager li i { color: #ccc; font-size: 18px; }
+.mbt-pager li a strong { display: block; font-size: 20px; color: #ccc; letter-spacing: 0.5px; font-weight: bold; text-transform: uppercase; font-family:oswald, sans-serif, arial; margin-bottom:10px;}
+.mbt-pager li a span { font-size: 15px; color: #666;  font-family:oswald,Helvetica, arial; margin:0px;} 
+.mbt-pager li a:hover span, 
+.mbt-pager li a:hover i { color: #ffffff; } 
+.mbt-pager li.previous i { float:left; margin-top:15%; margin-left:5%; } 
+.mbt-pager li.next i { float: right; 
+margin-top: 15%; 
+margin-right: 5%; }
+.mbt-pager li.next i, .mbt-pager li.previous i , 
+.mbt-pager li.next,  .mbt-pager li.previous{ 
+-webkit-transition-property: background color; -webkit-transition-duration: 0.4s; -webkit-transition-timing-function: ease-out; 
+-moz-transition-property: background color; -moz-transition-duration: 0.4s; -moz-transition-timing-function: ease-out; 
+-o-transition-property: background color; -o-transition-duration: 0.4s; -o-transition-timing-function: ease-out; 
+transition-property: background color; transition-duration: 0.4s; transition-timing-function: ease-out; }
+.fa-chevron-right {padding-right:0px;}
