@@ -46,17 +46,17 @@ width: 900px;
 .mbt-pager li.previous { margin:0px -2px 0px 0px; float: left;  border-right:1px solid #ddd; padding:0px; background:none; 
 } 
 .mbt-pager li.previous a { padding-right: 24px;  }
-.mbt-pager li.next:hover, .mbt-pager li.previous:hover  {background:#333333; }
+.mbt-pager li.next:hover, .mbt-pager li.previous:hover  {background:#8FB4D7; }
 .mbt-pager li { width: 50%; display: inline; float: left; text-align: center; } 
 .mbt-pager li a { position: relative; min-height: 77px; display: block; padding: 15px 46px 15px; outline:none; text-decoration:none;}
 .mbt-pager li i { color: #ccc; font-size: 18px; }
-.mbt-pager li a strong { display: block; font-size: 20px; color: #ccc; letter-spacing: 0.5px; font-weight: bold; text-transform: uppercase; font-family:oswald, sans-serif, arial; margin-bottom:10px;}
-.mbt-pager li a span { font-size: 15px; color: #666;  font-family:oswald,Helvetica, arial; margin:0px;} 
+.mbt-pager li a strong { display: block; font-size: 20px; color: #ccc; letter-spacing: 0.5px; font-weight: bold; text-transform: uppercase;}
+.mbt-pager li a span { font-size: 18px; color: #666;font-family: 'Slabo 27px' serif; margin:0px;} 
 .mbt-pager li a:hover span, 
 .mbt-pager li a:hover i { color: #ffffff; } 
-.mbt-pager li.previous i { float:left; margin-top:15%; margin-left:5%; } 
+.mbt-pager li.previous i { float:left; margin-top:8%; margin-left:5%; } 
 .mbt-pager li.next i { float: right; 
-margin-top: 15%; 
+margin-top: 8%; 
 margin-right: 5%; }
 .mbt-pager li.next i, .mbt-pager li.previous i , 
 .mbt-pager li.next,  .mbt-pager li.previous{ 
