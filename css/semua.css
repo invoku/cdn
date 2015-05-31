@@ -1,3 +1,27 @@
+.post {
+color: #666666;
+font-family:  'Roboto', sans-serif;
+line-height: 2em;
+margin-bottom: 10px;
+}
+.post-outer{
+font-family: 'Roboto', sans-serif;
+line-height: 2em;
+margin-bottom: 10px;
+}
+.post h2.post-title {letter-spacing:-1px;margin-top:0px;}
+.post h2 a {color: #353737; letter-spacing:-1px;}
+.post h2 a:hover {color: #666;text-decoration: none;}
+.post h2, .post h3 {padding: 10px 0px; font-weight: normal; color: #666;}
+.post h4, .post h5, .post h6 {padding: 10px 0px; font-size: 14px; font-weight: normal; color: #666;}
+.post blockquote {display: block; margin: 20px; padding: 0px 30px; background:#ddd; font-style: italic; color: #999;}
+/* IMAGES */
+img.centered {display: block; margin: auto;}
+img.alignright {display: inline; margin: 0px 0px 10px 20px;}
+img.alignleft {display: inline; margin: 0px 20px 10px 0px;}
+.alignleft {float: left;}
+.alignright {float: right;}
+.post-footer-line-1{display:none;}
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
