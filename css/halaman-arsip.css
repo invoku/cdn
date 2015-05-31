@@ -1,6 +1,9 @@
 /* =============================================================================
    Tambahan / add ons
    ========================================================================== */
+#list-main {
+    margin: 0 auto;
+}
 /* masonry */
 .masonry, .masonry .masonry-brick {
     -webkit-transition-duration: .7s;
@@ -25,8 +28,19 @@
 }
 
 .post img {
-    max-width: 100%;
+     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+}
+.thumbnail {
+    display: block;
+    padding: 0;
+    line-height: 1.428571429;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 2px;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.1);
 }
 .jqmaintitle a {
   color: #2c3e50 !important;
