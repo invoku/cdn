@@ -68,6 +68,7 @@ padding:15px 20px;
 .kotak-isi-pendahuluan p {
 display:inline;
 line-height:0;
+font-size:16px;
 }
 
 .kotak-isi-pendahuluan p.isi {
@@ -75,7 +76,7 @@ padding:5px 15px 20px;
 }
 
 .kotak .isi .isi-bahan {
-font-size:17px;
+font-size:16px;
 }
 
 .kotak .isi-bahan {
@@ -89,7 +90,7 @@ padding:0 0 0 20px;
 
 .kotak .isi-bahan p {
 border-bottom:2.6px dotted #d8d8d8;
-font-size:14px;
+font-size:16px;
 padding:6px!important;
 }
 
@@ -124,8 +125,7 @@ font-style:normal;
 }
 
 .kotak .isi-tips p {
-font-size:14px;
-font-weight:700;
+font-size:16px;
 padding:6px!important;
 }
 
@@ -134,7 +134,7 @@ padding:9px!important;
 }
 
 .kotak .isi-referensi p {
-font-size:11px;
+font-size:12px;
 }
 
 .kotak .isi ul {
@@ -160,8 +160,7 @@ width:100%;
 
 .kotak .isi-bahan ul li,.kotak .isi-bahan ol li {
 border-bottom:2.6px dotted #d8d8d8;
-font-size:14px;
-font-weight:500;
+font-size:16px;
 list-style-type:decimal;
 margin-left:20px;
 padding:6px!important;
@@ -169,16 +168,14 @@ padding:6px!important;
 
 .kotak .isi-langkah ol li,.kotak .isi-langkah ul li {
 border-bottom:2.6px dotted #d8d8d8;
-font-size:14px;
-font-weight:500;
+font-size:16px;
 list-style-type:decimal;
 padding:6px!important;
 }
 
 .kotak .isi-tips ul li,.kotak .isi-tips ol li {
 border-bottom:2.6px dotted #d8d8d8;
-font-size:14px;
-font-weight:500;
+font-size:16px;
 list-style-type:decimal;
 margin-left:26px;
 padding:6px!important;
@@ -191,7 +188,6 @@ padding:9px!important;
 
 .kotak .isi-referensi ul li,.kotak .isi-referensi ol li {
 font-size:11px;
-font-weight:500;
 list-style-type:disc;
 margin-left:10px;
 }
