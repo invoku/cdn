@@ -146,19 +146,6 @@ html {
     height: 100%;
 }
 
-body{
-   margin: 0; 
-   font-size: 100%; 
-   line-height: 1.231;
-   background: #F3F3F3; 
-   color: #666666;
-    font: normal 100%;
-    position: relative;
-    height: 100%;
-    font: 14px/1.428571429 Roboto, sans-serif;
-   background-color: #f0f0f0;
-}
-
 body, div, img, p, button, input, select, textarea, a {
     box-sizing: border-box;
 }
