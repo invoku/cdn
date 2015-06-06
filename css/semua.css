@@ -151,6 +151,8 @@ html {
 }
 
 body {
+   background: #F3F3F3; 
+   color: #666666;
     font: normal 100%;
     position: relative;
     height: 100%;
