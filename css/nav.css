@@ -48,12 +48,15 @@ nav.header .browse a img{height: 32px;  margin: 3px;}
 
 /*BROWSE AREA*/
 .browse-area{
-  margin: 0 auto;
+  margin: 53px 12% 0;
   float: none;
   background-color: white;
-  min-height: 385px;
-  display:none;
+  display: none;
+  position: absolute;
+  z-index: 900;
+  border-radius: 0 0 8px 8px;
   }
+ #browse-area-tutorial{display:block;}
 .browse-area .browse-text{
 font-size: 2.5em;
   margin: 5px 10px;
